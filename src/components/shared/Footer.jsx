@@ -1,5 +1,6 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import './Footer.css';
+import { Link } from 'react-router';
 
 function Footer() {
   return (
@@ -19,16 +20,16 @@ function Footer() {
             <h5 className="text-uppercase fw-bold mb-3">Enlaces Rápidos</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="/contacto" className="text-reset footer-link">Contacto</a>
+                <Link to={"/contacto"} className="text-reset footer-link">Contacto</Link>
               </li>
               <li>
-                <a href="/acercadenosotros" className="text-reset footer-link">Acerca de nosotros</a>
+                <Link to={"/acercadenosotros"} className="text-reset footer-link">Acerca de nosotros</Link>
               </li>
               <li>
-                <a href="/*" className="text-reset footer-link">Subscripciones</a>
+                <Link to={"/*"} className="text-reset footer-link">Subscripciones</Link>
               </li>
               <li>
-                <a href="/*" className="text-reset footer-link">Contenido Premium</a>
+                <Link to={"/*"} className="text-reset footer-link">Contenido Premium</Link>
               </li>
             </ul>
           </Col>
