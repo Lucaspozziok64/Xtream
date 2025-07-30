@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import '../../../Index.css';
+import '../../../index.css';
 const CaruselInicio = () => {
 
   return (
