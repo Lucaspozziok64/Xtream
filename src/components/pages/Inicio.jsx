@@ -1,8 +1,24 @@
 import CaruselInicio from "./componentesInicio/CaruselInicio";
 import CardInicio from "./componentesInicio/CardInicio";
 import { Container, Row } from "react-bootstrap";
+import { useState } from "react";
 
 const Inicio = ({ peliculas }) => {
+  // logica del select
+  const [selector, setSelector] = useState('');
+
+  const handleSelectChange = (e) => {
+    setSelector(e.target.value);
+    // Filtrar las películas según la opción seleccionada
+    const filteredPeliculas = peliculas.filter(pelicula => {
+      return pelicula.genero === e.target.value;
+    });
+  };
+
+  const filteredPeliculas = selector ? peliculas.filter(pelicula => pelicula.genero === selector) : peliculas;
+  
+  // Si no hay selección, mostrar todas las películas
+
   return (
     <>
       {/* carusel*/}
@@ -15,13 +31,14 @@ const Inicio = ({ peliculas }) => {
         </p>
 
         {/* select */}
-        <select className="form-select w-auto m-3">
-          <option value="">Seleccione lo que deseas ver</option>
+        <select className="form-select w-auto m-3" onChange={handleSelectChange}>
+          <option value={selector}>Seleccione lo que deseas ver</option>
           <option value="opcion1">Drama </option>
           <option value="opcion2">Accion </option>
           <option value="opcion3">Terror </option>
           <option value="opcion4">Animacion </option>
           <option value="opcion5">Comedia</option>
+          <option value="opcion5">series</option>
           <option value="opcion6">Ver en familia</option>
         </select>
         {/* card */}

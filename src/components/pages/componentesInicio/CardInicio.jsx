@@ -34,7 +34,7 @@ const CardInicio = ({ pelicula }) => {
                                 
                             </Card.Body>
                             <Card.Footer>
-                                <Link className='btn btn-success' to={`/detalle/${pelicula.id}`}>Ver más</Link></Card.Footer>
+                                <Link className='btn btn-success' to={`/detalle/${pelicula.id}`}> Ver más </Link></Card.Footer>
                         </Card>
                     </Col>
     </>
