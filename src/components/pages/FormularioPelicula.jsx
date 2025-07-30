@@ -33,7 +33,6 @@ const FormularioPelicula = ({ titulo, crearPeliculas, buscarPelicula, editarPeli
 
   const onSubmit = (pelicula) => {
     if (titulo === "Añadir película/serie") {
-      console.log(pelicula);
       if (crearPeliculas(pelicula)) {
         Swal.fire({
           title: "Pelicula/serie creada",
